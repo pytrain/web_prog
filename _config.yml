@@ -1,3 +1,4 @@
 title: Introduction to Web Programming
-description: (insert description here)
 theme: jekyll-theme-cayman
+github:
+  is_project_page: false
