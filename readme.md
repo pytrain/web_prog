@@ -5,7 +5,7 @@ Welcome to the 2-Day Introductory Web Programming course! We intend to teach you
 ## Software Requirements
 * A modern web browser (Google Chrome, Mozilla Firefox, and Google Chrome are preferred)
 * Plaintext/ASCII editor that you know how to use to write a text file (Microsoft Word is not a viable solution)
-* PHP version 5.5+
+* PHP version 5.5+ (Mac OS already contains; [PHP Download Link](https://www.php.net/downloads.php))
 
 ## Agenda
 
