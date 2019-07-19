@@ -27,7 +27,7 @@ Welcome to the 2-Day Introductory Web Programming course! We intend to teach you
 
 | Time | Lecture Topic | Lecture | Lecturer |
 |------|---------------|---------|----------|
-| 08:45 - 09:45 | Introduction to PHP | | Jules |
+| 08:45 - 09:45 | Introduction to PHP | | Brent |
 | 09:45 - 10:00 | Break | | |
 | 10:00 - 12:00 | The PHP Scripting Language | | Jules |
 | 12:00 - 13:00 | Lunch Break | | |
