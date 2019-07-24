@@ -8,12 +8,15 @@
 - [HTML Tutorial](https://www.quackit.com/html/tutorial/) (from Quackit)
 
 **We will cover the following:**
-- [Basic components of a web page](#)
+- [Basic components of a web page](#basic-components-of-a-web-page)
 - [Formatting](#formatting)
 - [Attributes](#attributes)
-- Links
-- Images
-- Tables
+- [Links](#links)
+- [Images](#images)
+- [Comments](#comments)
+- [Tables](#tables)
+- [Meta Tags](#meta-tags)
+- [Forms](#forms)
 
 ## Basic Components of a Web Page
 ---
