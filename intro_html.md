@@ -1,5 +1,3 @@
-<center><img src="http://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"></center>
-
 <center>
   <h1>Introduction to HTML</h1>
 </center>
