@@ -1,6 +1,11 @@
 title: Introduction to Web Programming
-description: SSAI Hampton, July 29 & 30, 2019
-logo: "/img/nasa-logo.svg?raw=true"
+description: > # your text below (remove <br> elements if you don't need line breaks)
+  SSAI Hampton, July 29 & 30, 2019 
+  <br><br>
+  <img src="/img/nasa-logo.svg?raw=true">
+
+#SSAI Hampton, July 29 & 30, 2019
+#logo: "/img/nasa-logo.svg?raw=true"
 theme: jekyll-theme-cayman
 github:
   is_project_page: false
