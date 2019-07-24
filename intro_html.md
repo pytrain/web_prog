@@ -8,14 +8,16 @@
 - [HTML Tutorial](https://www.quackit.com/html/tutorial/) (from Quackit)
 
 **We will cover the following:**
-- Basic components of a web page
+- [Basic components of a web page](one)
 - Formatting
 - Attributes
 - Links
 - Images
 - Tables
 
-## Basic Components of a Web Page
+[one]: ## Basic Components of a Web Page
+---
+
 - An HTML document is a text file made up of HTML elements. 
 - An HTML element is an individual component of an HTML document. 
 - HTML tags tell your browser which elements to present and how to present them. 
@@ -45,6 +47,7 @@
 - The **`<p>`** tag defines a paragraph. This contains the body text.
   
 ## Formatting
+---
 
 ### Headings
 ```html
@@ -97,6 +100,8 @@ CSS and Javascript.
 ```
 
 ## Attributes
+---
+
 - Can be added to HTML elements to provide further information about that element.
 - HTML tags can contain one or more attributes. 
 - Attributes are added to a tag to provide the browser with more information about how the tag should appear or behave. 
@@ -116,11 +121,13 @@ List of attributes:
 **style:** Used with CSS to apply styles directly to the element (i.e. inline styles).
 
 ## Links
+---
+
 - Links (or hyperlinks), are defined using the **`<a>`** tag (or the anchor element).
 - To create a hyperlink, you use the **`<a>`** tag in conjunction with the href attribute. 
 - The value of the href attribute is the URL, or, location of where the link is pointing to.
 
-### Example
+### Links Example
 ```html
 Here is an example of link:  <a href="https://www.github.com/pytrain" target="_blank"> HTML Tutorial </a>.  You can try out!
 ```
@@ -176,6 +183,8 @@ Here is an example of link:  <a href="https://www.github.com/pytrain" target="_b
 ```
 
 ## Images
+---
+
 - To embed an image into a web page, the image first needs to exist in either **.jpg**, **.gif**, or **.png** format. 
 - Use the **`<img>`** tag, specifying the actual location of the image
 ```html
@@ -190,12 +199,16 @@ Here is an example of link:  <a href="https://www.github.com/pytrain" target="_b
 | **alt** |	Alternate text that specifies text to be used in case the browser/user agent can't render the image. |
 
 ## Comments
+---
+
 You write comments like this:
 ```html
 <!-- Write your comment here -->
 ```
 
 ## Tables
+---
+
 - Allow you to present tabular data in a nice, structured way.
 - Present data within a grid — with rows and columns.
 
@@ -227,6 +240,8 @@ The basic table elements are:
 ```
 
 ## Meta Tags
+---
+
 - Allow you to provide metadata about your HTML pages
 - Useful for search engines, browsers, and other applications trying to understand more about your page
 
@@ -255,6 +270,7 @@ You can add metadata to your web pages by placing **`<meta>`** tags between the 
 ```
 
 ## Forms
+---
 
 - Allow you to build more dynamic websites.
 - Made up of any number of form elements.
@@ -270,11 +286,11 @@ A form is defined using the **`<form>  </form>`** tags
 </form>
 ```
 
-#### The `<input>` Tag
+### The `<input>` Tag
     
 - Allows you to specify various types of user input fields such as text, radio buttons, checkboxes etc.
 
-#### Text
+### Text
 - Used when you want the user to type short amounts of text into the form.
 
 ```html
@@ -284,7 +300,7 @@ A form is defined using the **`<form>  </form>`** tags
 </form>
 ```
 
-#### Radio Buttons
+### Radio Buttons
 - Used when you want the user to select only one option from a pre-determined set of options.
 - User can select one option only.
 
@@ -295,7 +311,7 @@ A form is defined using the **`<form>  </form>`** tags
 </form>
 ```
 
-#### Checkboxes
+### Checkboxes
 - Enable the user to make multiple selections.
 - Used when you want to allow the users to make more than one selection.
 ```html
@@ -307,7 +323,7 @@ A form is defined using the **`<form>  </form>`** tags
     <input type="checkbox" name="technology" value="PHP"> PHP
 </form>
 ```
-#### Submit
+### Submit
 - The submit button allows the user to actually submit the form.
 
 ```html
@@ -320,7 +336,7 @@ A form is defined using the **`<form>  </form>`** tags
     <input type="submit">
 </form>
 ```
-#### Select List
+### Select List
 - A dropdown list with options.
 - Allows the user to select one option from a list of pre-defined options.
 - Created using the **`<select>`** element in conjunction with the **`<option>`** element.
@@ -336,7 +352,7 @@ A form is defined using the **`<form>  </form>`** tags
 </form>
 ```
 
-#### Textarea
+### Textarea
 - Use to enable users to enter larger blocks of text than with the **`<input>`** tag.
 - It is recommended to use the **maxlength** attribute to restrict the user's input to a certain number of characters. 
 - Can also use the **cols** and **rows** attributes to adjust the width and height.
@@ -347,7 +363,7 @@ A form is defined using the **`<form>  </form>`** tags
 </form>
 ```
 
-#### Form Action
+### Form Action
 - Need the system to do something with the data when user submits a form.
 - The action page is the page that the form is submitted to.
 - This page could contain advanced scripts or programming that inserts the form data into a database or emails an administrator etc.
