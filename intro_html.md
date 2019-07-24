@@ -180,6 +180,7 @@ Here is an example of link:  <a href="https://www.github.com/pytrain" target="_b
 - Use the **`<img>`** tag, specifying the actual location of the image
 ```html
 <img src="/pix/samples/18m.jpg" width="166" height="101" alt="Photo of three cats">
+```
 
 | Attributes | Description |
 | --- | --- | 
@@ -229,7 +230,7 @@ The basic table elements are:
 - Allow you to provide metadata about your HTML pages
 - Useful for search engines, browsers, and other applications trying to understand more about your page
 
-You can add metadata to your web pages by placing **<span><</span>meta<span>></span>** tags between the **<span><</span>head<span>></span> <span><</span><head><span>></span>** tags. 
+You can add metadata to your web pages by placing **`<meta>`** tags between the **`<head> </head>`** tags. 
 
 
 | Attribute	| Description |
@@ -253,13 +254,13 @@ You can add metadata to your web pages by placing **<span><</span>meta<span>></s
 <meta http-equiv="refresh" content="15">
 ```
 
-## <font color="red">Forms</font>
+## Forms
 
 - Allow you to build more dynamic websites.
 - Made up of any number of form elements.
 - The elements enable the user to do things such as enter information or make a selection from a preset options.
 
-A form is defined using the **<span><</span>form<span>></span>  <span><</span>/form<span>></span>** tags
+A form is defined using the **`<form>  </form>`** tags
 
 ```html
 <form>
@@ -269,7 +270,7 @@ A form is defined using the **<span><</span>form<span>></span>  <span><</span>/f
 </form>
 ```
 
-##### The <span><</span>input<span>></span> Tag
+#### The `<input>` Tag
     
 - Allows you to specify various types of user input fields such as text, radio buttons, checkboxes etc.
 
@@ -322,7 +323,7 @@ A form is defined using the **<span><</span>form<span>></span>  <span><</span>/f
 #### Select List
 - A dropdown list with options.
 - Allows the user to select one option from a list of pre-defined options.
-- Created using the **<span><</span>select<span>></span>** element in conjunction with the **<span><</span>option<span>></span>** element.
+- Created using the **`<select>`** element in conjunction with the **`<option>`** element.
 
 ```html
 <form>
@@ -336,7 +337,7 @@ A form is defined using the **<span><</span>form<span>></span>  <span><</span>/f
 ```
 
 #### Textarea
-- Use to enable users to enter larger blocks of text than with the **<span><</span>input<span>></span>** tag.
+- Use to enable users to enter larger blocks of text than with the **`<input>`** tag.
 - It is recommended to use the **maxlength** attribute to restrict the user's input to a certain number of characters. 
 - Can also use the **cols** and **rows** attributes to adjust the width and height.
 
