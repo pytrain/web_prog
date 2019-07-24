@@ -1,6 +1,8 @@
 <center><img src="http://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg"></center>
 
-# Introduction to HTML
+<center>
+  <h1>Introduction to HTML</h1>
+</center>
 
 ## Useful Pointers
 - [Intro to HTML/CSS: Making Webpages](https://www.khanacademy.org/computing/computer-programming/html-css) (from Khan Academy)
