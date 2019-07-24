@@ -1,9 +1,5 @@
 title: Introduction to Web Programming
-description: >
-  SSAI Hampton, July 29 & 30, 2019
-  <br><br>
-  <img src="/images/nasa-logo.png?raw=true">
-  
+description: SSAI Hampton, July 29 & 30, 2019
 theme: jekyll-theme-cayman
 github:
   is_project_page: false
