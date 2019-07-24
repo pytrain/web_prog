@@ -8,14 +8,14 @@
 - [HTML Tutorial](https://www.quackit.com/html/tutorial/) (from Quackit)
 
 **We will cover the following:**
-- [Basic components of a web page](one)
-- Formatting
-- Attributes
+- [Basic components of a web page](#)
+- [Formatting](#formatting)
+- [Attributes](#attributes)
 - Links
 - Images
 - Tables
 
-[one]: ## Basic Components of a Web Page
+## Basic Components of a Web Page
 ---
 
 - An HTML document is a text file made up of HTML elements. 
