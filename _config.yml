@@ -4,3 +4,6 @@ avatar: "http://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.sv
 theme: jekyll-theme-cayman
 github:
   is_project_page: false
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
