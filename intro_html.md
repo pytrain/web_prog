@@ -156,6 +156,7 @@ Here is an example of link:  <a href="https://www.github.com/pytrain" target="_b
 ### Jump Links
 - Make your links "jump" to other sections within the same page (or another page). 
 - The process involved two steps.
+
 ```html
 <h4 id="jump_link">Sample Jump Link</h4>
 
@@ -166,6 +167,7 @@ Here is an example of link:  <a href="https://www.github.com/pytrain" target="_b
 
 - Allows you to create a hyperlink to an email address. 
 - Use the **mailto** attribute in your anchor tag.
+
 ```html
 <a href="mailto:Jules_Kouatchou@example.com">Email Jules Kouatchou</a>
 ```
@@ -202,6 +204,7 @@ The basic table elements are:
 - **`<tr>`** Tag to define a row.
 - **`<th>`** Tag for table data cell.
 - **`<td>`** Tag for table headers.
+
 ```html
 <table>
     <tr>
