@@ -37,7 +37,7 @@
 </html>
 ```
 
-- The **<span><</span>!DOCTYPE...<span>></span>**  declaration tells the browser which version of HTML the document is using.
+- The **`<!DOCTYPE...>`**  declaration tells the browser which version of HTML the document is using.
 - The **<span><</span>html<span>></span>** element is the document's root element - it can be thought of as a container that all other tags sit inside (except for the !DOCTYPE declaration).
 - The **<span><</span>head<span>></span>** tag contains information that is not normally viewable within your browser (such as meta tags, JavaScript and CSS), although the **<span><</span>title<span>></span>** tag is an exception to this. The content of the **<span><</span>title<span>></span>** tag is displayed in the browser's title bar.
 - The **<span><</span>body<span>></span>** tag is the main area for your content. This is where most of your code (and viewable elements) will go.
