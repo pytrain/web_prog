@@ -141,6 +141,7 @@ This refers to a URL where the path, **relative to the domain's root**, is provi
 ```
 ### Link Targets
 Use to nominate whether to open the URL in a new window or the current window.
+
 | Target Type | Description |
 | --- | --- |
 | **_blank**	| Opens the URL in a new browser window. |
