@@ -11,7 +11,7 @@ Welcome to the 2-Day Introductory Web Programming course! We intend to teach you
 
 | Time | Lecture Topic | Lecture | Lecturer |
 |------|---------------|---------|----------|
-| 08:45 - 09:45 | Review of HTML (HyperText Markup Language) | | Jules |
+| 08:45 - 09:45 | [Review of HTML (HyperText Markup Language)](intro_html) | | Jules |
 | 09:45 - 10:00 | Break | | |
 | 10:00 - 11:00 | Review of CSS (Cascading Style Sheets) | | Brent |
 | 11:00 - 12:00 | Javascript I | | Jules |
