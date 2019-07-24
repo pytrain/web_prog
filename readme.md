@@ -1,5 +1,3 @@
-# Introduction to Web Programming
-
 Welcome to the 2-Day Introductory Web Programming course! We intend to teach you the necessary skills needed to produce web pages and interactivity, usability, and programmability within those web pages. To get started, please see below the required software installations and then following is the tentative agenda for the course.
 
 ## Software Requirements
