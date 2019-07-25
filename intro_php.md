@@ -55,9 +55,11 @@ echo "Hello, world!";
     <title>A Simple PHP File</title>
 </head>
 <body>```
+
 ```php
    <?php echo "Hello, world!"; ?>
 ```
+
 ```html
 </body>
 </html>
