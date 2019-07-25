@@ -54,8 +54,11 @@ echo "Hello, world!";
     <meta charset="UTF-8">
     <title>A Simple PHP File</title>
 </head>
-<body>
+<body>```
+```php
    <?php echo "Hello, world!"; ?>
+```
+```html
 </body>
 </html>
 ```
