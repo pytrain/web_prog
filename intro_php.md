@@ -55,7 +55,7 @@ echo "Hello, world!";
     <title>A Simple PHP File</title>
 </head>
 <body>
-   <?php echo "Hello, world!"; ?>
+   
 </body>
 </html>
 ```
