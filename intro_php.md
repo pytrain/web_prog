@@ -47,20 +47,15 @@ echo "Hello, world!";
 - PHP files are plain text files with .php extension.
 - PHP can be embedded within a normal HTML web page.
 
-```html
+```html+php
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>A Simple PHP File</title>
 </head>
-<body>```
-
-```php
+<body>
    <?php echo "Hello, world!"; ?>
-```
-
-```html
 </body>
 </html>
 ```
