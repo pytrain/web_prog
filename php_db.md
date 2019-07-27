@@ -1,1 +1,3 @@
-
+- https://www.tutorialspoint.com/php_mysql_online.php
+- http://phpfiddle.org/
+- https://www.w3schools.com/php/php_mysql_intro.asp
