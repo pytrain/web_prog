@@ -1,1 +1,1 @@
-
+- online demo of PHPMyAdmin https://demo.phpmyadmin.net/master-config/
