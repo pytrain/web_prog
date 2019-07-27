@@ -227,3 +227,203 @@ $c = 4E-10;
 var_dump($c);
 ?>
 ```
+
+### <>---<> Operations on Integers and Doubles
+
+```php
+<?php
+$x = 10;
+$y = 4;
+echo($x + $y); // 0utputs: 14
+echo($x - $y); // 0utputs: 6
+echo($x * $y); // 0utputs: 40
+echo($x / $y); // 0utputs: 2.5
+echo($x % $y); // 0utputs: 2
+?>
+```
+
+```php
+<?php
+// Round fractions up
+echo ceil(4.2);    // 0utputs: 5
+echo ceil(9.99);   // 0utputs: 10
+echo ceil(-5.18);  // 0utputs: -5
+ 
+// Round fractions down
+echo floor(4.2);    // 0utputs: 4
+echo floor(9.99);   // 0utputs: 9
+echo floor(-5.18);  // 0utputs: -6
+?>
+```
+
+```php
+<?php
+$x = 10;
+echo $x; // Outputs: 10
+ 
+$x = 20;
+$x += 30;
+echo $x; // Outputs: 50
+ 
+$x = 50;
+$x -= 20;
+?>
+```
+
+```php
+<?php
+$x = 10;
+echo ++$x; // Outputs: 11
+echo $x;   // Outputs: 11
+ 
+$x = 10;
+echo $x++; // Outputs: 10
+echo $x;   // Outputs: 11
+ 
+$x = 10;
+echo --$x; // Outputs: 9
+echo $x;   // Outputs: 9
+ 
+$x = 10;
+echo $x--; // Outputs: 10
+echo $x;   // Outputs: 9
+?>
+```
+
+### Strings
+- You can use either single quote (**`'`**) or double quotes (**`"`**) to define a string.
+- Strings enclosed in single-quotes are treated almost literally.
+- Strings delimited by the double quotes replaces variables with the string representations of their values as well as specially interpreting certain escape sequences.
+- A string can hold letters, numbers, and special characters and it can be as large as up to 2GB 
+
+```php
+<?php
+$a = 'Hello world!';
+echo $a;
+echo "<br>";
+ 
+$b = "Hello world!";
+echo $b;
+echo "<br>";
+ 
+$c = 'Stay here, I\'ll be back.';
+echo $c;
+?>
+```
+
+The escape-sequence replacements are:
+
+- **`\n`** is replaced by the newline character
+- **`\r`** is replaced by the carriage-return character
+- **`\t`** is replaced by the tab character
+- **`\\\\$`** is replaced by the dollar sign itself (**`$`**)
+- **`\\"`** is replaced by a single double-quote (**`"`**)
+- **`\\\\`** is replaced by a single backslash (**`\\`**)
+
+```php
+<?php
+$my_str = 'World';
+echo "Hello, $my_str!<br>";      // Displays: Hello World!
+echo 'Hello, $my_str!<br>';      // Displays: Hello, $my_str!
+ 
+echo '<pre>Hello\tWorld!</pre>'; // Displays: Hello\tWorld!
+echo "<pre>Hello\tWorld!</pre>"; // Displays: Hello   World!
+echo 'I\'ll be back';            // Displays: I'll be back
+?>
+```
+
+### <>---<> String Manipulations
+```php
+<?php
+$my_str = 'Welcome to the Introductory Web Programming course';
+
+// Count the number of charcaters
+echo strlen($my_str);
+
+// Count the number of words
+echo str_word_count($my_str);
+
+// Display replaced string
+echo str_replace("course", "Course", $my_str);
+
+// Display reversed string
+echo strrev($my_str);
+?>
+```
+
+### <>---<> String Operators
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+**.**	| Concatenation	| $\$$str1 . $\$$str2 | Concatenation of $\$$str1 and $\$$str2 |
+**.=**	| Concatenation assignment | $\$$str1 .= $\$$str2	| Appends the $\$$str2 to the $\$$str1 |
+
+```php
+<?php
+$x = "Hello";
+$y = " World!";
+echo $x . $y; // Outputs: Hello World!
+ 
+$x .= $y;
+echo $x; // Outputs: Hello World!
+?>
+```
+
+### Booleans
+- Can take two possible values either 1 (true) or 0 (false).
+
+```php
+<?php
+// Assign the value TRUE to a variable
+$show_error = true;
+var_dump($show_error);
+?>
+```
+
+### <>---<> Comparison Operators
+
+```php
+<?php
+$x = 25;
+$y = 35;
+$z = "25";
+var_dump($x == $z);  // Outputs: boolean true
+var_dump($x === $z); // Outputs: boolean false
+var_dump($x != $y);  // Outputs: boolean true
+var_dump($x !== $z); // Outputs: boolean true
+var_dump($x < $y);   // Outputs: boolean true
+var_dump($x > $y);   // Outputs: boolean false
+var_dump($x <= $y);  // Outputs: boolean true
+var_dump($x >= $y);  // Outputs: boolean false
+?>
+```
+
+### Arrays
+- An array is formally defined as an indexed collection of data values. 
+- Each index (also known as the key) of an array is unique and references a corresponding value.
+- There are three types of arrays that you can create. These are:
+  1. **Indexed array** — An array with a numeric key.
+  2. **Associative array** — An array where each key has its own specific value.
+  3. **Multidimensional array** — An array containing one or more arrays within itself.
+  
+### <>---<> Indexed Array
+- An indexed or numeric array stores each array element with a numeric index
+
+```php
+<?php
+$colors = array("Red", "Green", "Blue");
+var_dump($colors);
+echo "<br>";
+?>
+```
+
+```php
+<?php
+$colors[0] = "Red"; 
+$colors[1] = "Green"; 
+$colors[2] = "Blue"; 
+?>
+```
+
+### <>---<> Associative Arrays
+- In an associative array, the keys assigned to values can be arbitrary and user defined strings.
