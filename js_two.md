@@ -1,1 +1,3 @@
-
+- Javascript project
+- https://github.com/micromata/awesome-javascript-learning
+- More advanced topics?
