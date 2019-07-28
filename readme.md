@@ -13,23 +13,23 @@ Welcome to the 2-Day Introductory Web Programming course! We intend to teach you
 |------|---------------|---------|----------|
 | 08:45 - 09:45 | [Review of HTML (HyperText Markup Language)](intro_html.md) | | Jules |
 | 09:45 - 10:00 | Break | | |
-| 10:00 - 11:00 | Review of CSS (Cascading Style Sheets) | | Brent |
-| 11:00 - 12:00 | Javascript I | | Jules |
+| 10:00 - 11:00 | [Review of CSS (Cascading Style Sheets)](intro_css.md) | | Brent |
+| 11:00 - 12:00 | [Javascript I](intro_javascript.md) | | Jules |
 | 12:00 - 13:00 | Lunch Break | | |
-| 13:00 - 14:00 | Javascript II | | Brent |
-| 14:00 - 15:00 | jQuery I | | Brent |
+| 13:00 - 14:00 | [Javascript II](js_two.md) | | Brent |
+| 14:00 - 15:00 | [jQuery I](jquery_1.md) | | Brent |
 | 15:00 - 15:15 | Break | | |
-| 15:15 - 16:30 | jQeury II | | Brent |
+| 15:15 - 16:30 | [jQeury II](jquery_2.md) | | Brent |
 
 ### Day 2: PHP
 
 | Time | Lecture Topic | Lecture | Lecturer |
 |------|---------------|---------|----------|
-| 08:45 - 09:45 | Introduction to PHP | | Brent |
+| 08:45 - 09:45 | [Introduction to PHP]() | | Brent |
 | 09:45 - 10:00 | Break | | |
-| 10:00 - 12:00 | The PHP Scripting Language | | Jules |
+| 10:00 - 12:00 | [The PHP Scripting Language](intro_php.md) | | Jules |
 | 12:00 - 13:00 | Lunch Break | | |
-| 13:00 - 14:30 | Sample PHP Project | | Brent |
-| 14:30 - 15:30 | Introduction to PHP-Apache Interactions | | Brent |
+| 13:00 - 14:30 | [Sample PHP Project](php_proj.md) | | Brent |
+| 14:30 - 15:30 | [Introduction to PHP-Apache Interactions](php_apache.md) | | Brent |
 | 15:30 - 15:55 | Break | | |
-| 15:45 - 16:30 | Introduction to PHP-MySQL Interactions | | Brent |
+| 15:45 - 16:30 | [Introduction to PHP-MySQL Interactions](php_db.md) | | Brent |
