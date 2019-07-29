@@ -9,14 +9,22 @@
 - [The Modern JavaScript Tutorial](https://javascript.info)
 
 **We will cover the following:**
-- Basic components of a web page
-- Formatting
-- Attributes
-- Links
-- Images
-- Tables
+- [What is JavaScripts?](#what-is-javascripts)
+- [First Program](#my-first-program)
+- [Code Structure](#code-structure)
+- [Variables](#variables)
+- [Data Types](#data-types)
+- [Interaction](#interaction)
+- [Conditional Statements](#conditional-statements)
+- [Loops](#loops)
+- [Functions](#function-expressions-and-arrows)
+- [Arrays](#arrays)
+- [Array Manipulations](#array-manipulations)
+- [Objects](#objects)
 
 ## What is JavaScripts?
+---
+
 - Initially created to “make web pages alive”.
 - JavaScript programs (scripts) can be written right in a web page’s HTML and run automatically as the page loads.
 - Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.
@@ -24,6 +32,8 @@
 - JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
 
 ## My First Program
+---
+
 - JavaScript programs can be inserted into any part of an HTML document with the help of the **`<script>`** tag.
 - The **`<script>`** tag contains JavaScript code which is automatically executed when the browser processes the tag.
 
@@ -59,6 +69,7 @@
 ```
 
 ## Code  Structure
+---
 
 ### Statements
 - Statements are syntax constructs and commands that perform actions.
@@ -110,6 +121,8 @@ alert('Welcome!');
 ```
 
 ## Variables
+---
+
 - To create a variable in JavaScript, use the **let** keyword.
 - The name of a variable must contain only letters, digits, or the symbols `$` and `_`.
 - The first character must not be a digit.
@@ -162,6 +175,8 @@ alert(color); // #FF7F00
 4. Show the value of old_topic using alert.
 
 ## Data Types
+---
+
 - A variable in JavaScript can contain any data. 
 - A variable can at one moment be a string and at another be a number:
 
@@ -361,9 +376,12 @@ alert( Boolean("") ); // false
 ```
 
 ## Interaction
+---
+
 ### alert
 - Shows a message (in a mini-window) and pauses script execution until the user presses “OK”.
 - The mini-window with the message is called a modal window.
+
 ### prompt
 - Accept two arguments:
   1. **title**: The text to show the visitor.
@@ -386,6 +404,8 @@ alert( isBoss ); // true if OK is pressed
 ```
 
 ## Conditional Statements
+---
+
 - A number **0**, an empty string **""**, **null**, **undefined**, and **NaN** all become **false**. Because of that they are called “falsy” values.
 - Other values become **true**, so they are called “truthy”.
 
@@ -498,6 +518,8 @@ alert( "I don't know such values" );
 ```
 
 ## Loops
+---
+
 - Loops are a way to repeat the same code multiple times.
 
 ### The “while” Loop
@@ -548,7 +570,7 @@ do {
 } while (i < 3);
 ```
 
-### The ""for" Loop
+### The "for" Loop
 
 ```javascript
 // Syntax
@@ -633,6 +655,8 @@ while (i) {
 ```
 
 ## Function Expressions and Arrows
+---
+
 - A function is a special kind of value.
 
 ```javascript
@@ -707,6 +731,7 @@ ask("Do you agree?", showOk, showCancel);
 ```
 
 ### Arrow Functions
+---
 
 ```javascript
 // Syntax
@@ -733,6 +758,8 @@ alert( sum(1, 2) ); // 3
 ```
 
 ## Arrays
+---
+
 - JavaScript can hold an array of variables in an Array object.
 - In JavaScript, an array also functions as a list, a stack or a queue.
 - To define an array, either use the brackets notation or the **Array** object notation.
@@ -765,6 +792,7 @@ var myArray = ["string", 10, {}]
 ```
 
 ## Array Manipulations
+---
 
 ### push and pop
 
@@ -817,6 +845,8 @@ console.log(myArray);       // will print out 0,1,2,8,9
 ```
 
 ## Objects
+---
+
 - JavaScript is a functional language, and for object oriented programming it uses both objects and functions.
 - Objects are usually used as a data structure, similar to a dictionary in Python or a map in Java.
 
