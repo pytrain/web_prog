@@ -14,6 +14,10 @@
 - [My First PHP Script](#my-first-php-script)
 - [Variables](#variables)
 - [Data Types](#data-types)
+- [Conditional Statements](#conditional-statements)
+- [Loops](#loops)
+- [Functions](#functions)
+- [GET and POST](#get-and-post)
 
 ## What is PHP?
 ---
@@ -194,14 +198,14 @@ echo 'Thank you for visiting - ' . SITE_URL;
 ---
 
 - PHP supports total eight primitive data types: 
-  1. Integer
-  2. Floating point number or Float
-  3. String
-  4. Booleans
-  5. Array
-  6. Object
-  7. resource
-  8. NULL.
+  1. [Integer](#integer)
+  2. [Floating point number or Float](#floating-point-numbers-or-doubles)
+  3. [String](#strings)
+  4. [Booleans](#booleans)
+  5. [Array](#arrays)
+  6. [Object](#objects)
+  7. [Resource](#resources)
+  8. [NULL](#null)
   
 ### Integer
 - Can be specified in decimal (base 10), hexadecimal (base 16 - prefixed with **0x**) or octal (base 8 - prefixed with **0**) notation.
@@ -329,9 +333,9 @@ The escape-sequence replacements are:
 - **`\n`** is replaced by the newline character
 - **`\r`** is replaced by the carriage-return character
 - **`\t`** is replaced by the tab character
-- **`\\\\$`** is replaced by the dollar sign itself (**`$`**)
-- **`\\"`** is replaced by a single double-quote (**`"`**)
-- **`\\\\`** is replaced by a single backslash (**`\\`**)
+- **`\$`** is replaced by the dollar sign itself (**`$`**)
+- **`\"`** is replaced by a single double-quote (**`"`**)
+- **`\\`** is replaced by a single backslash (**`\`**)
 
 ```php
 <?php
@@ -368,8 +372,8 @@ echo strrev($my_str);
 
 | Operator | Description | Example | Result |
 | --- | --- | --- | --- |
-**.**	| Concatenation	| $\$$str1 . $\$$str2 | Concatenation of $\$$str1 and $\$$str2 |
-**.=**	| Concatenation assignment | $\$$str1 .= $\$$str2	| Appends the $\$$str2 to the $\$$str1 |
+**.**	| Concatenation	| $str1 . $str2 | Concatenation of $str1 and $str2 |
+**.=**	| Concatenation assignment | $str1 .= $str2	| Appends the $str2 to the $str1 |
 
 ```php
 <?php
@@ -545,13 +549,13 @@ print_r($age);
 
 | Operator | Description | Example | Result |
 | --- | --- | --- | --- |
-| +	| Union	| $\$$x + $\$$y |	Union of $\$$x and $\$$y |
-| ==	| Equality |	$\$$x == $\$$y |	True if $\$$x and $\$$y have the same  key/value pairs |
-| ===	| Identity	| $\$$x === $\$$y	| True if $\$$x and $\$$y have the same  key/value pairs |
-| $ $| $ $ | $ $ | in the same order and of the same types |
-| !=	| Inequality |	$\$$x != $\$$y |	True if $\$$x is not equal to $\$$y |
-| <>	| Inequality |	$\$$x <> $\$$y |	True if $\$$x is not equal to $\$$y |
-| !==	| Non-identity |	$\$$x !== $\$$y |	True if $\$$x is not identical to $\$$y |
+| +	| Union	| $x + $y |	Union of $x and $y |
+| ==	| Equality |	$x == $y |	True if $x and $y have the same  key/value pairs |
+| ===	| Identity	| $x === $y	| True if $x and $y have the same  key/value pairs |
+| |  |  | in the same order and of the same types |
+| !=	| Inequality |	$x != $y |	True if $x is not equal to $y |
+| <>	| Inequality |	$x <> $y |	True if $x is not equal to $y |
+| !==	| Non-identity |	$x !== $y |	True if $x is not identical to $y |
 
 ```php
 <?php
@@ -701,7 +705,7 @@ if($age < 18){
   - To prevent this add a **break** statement to the end of each case block. 
   
 ```php
-\\ Syntax
+// Syntax
 switch(n){
     case label1:
         // Code to be executed if n=label1
@@ -799,7 +803,7 @@ while($i <= 3);
 ?>
 ```
 
-### The ""for" Loop
+### The "for" Loop
 
 ```php
 // Syntax
