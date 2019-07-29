@@ -152,8 +152,7 @@ Types of CSS selectors:
   .container {  
         margin: 10px;  
   }
-  ```
-  
+  ```  
   ```html
   <div class='container'>  
       <h1> This is heading </h1>  
@@ -276,16 +275,6 @@ Types of boxes:
 * block (stacked upon other boxes)
 * inline (flows with document's text)
 * inline-block (combination of the prior two)
-
-## Exercise
----
-
-Exercises:
-- Project: form?
-- Their own personal website or blog (sketch a draft, then create it)
-- CSS Zen Garden
-- Position planet - https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/pc/challenge-position-planet
-- A photo gallery?
 
 ## Resources
 ---
