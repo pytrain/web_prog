@@ -129,7 +129,7 @@ p {
 
 Types of CSS selectors:
 
-1. Universal (*)
+1. **Universal (*)**
   ```css
   * {
       padding: 5px;
@@ -137,7 +137,7 @@ Types of CSS selectors:
       background: rgba(255,0,0,0.25)
   }
   ```
-2. Element (h1)
+2. **Element (h1)**
   ```css
   h1 {  
       font-size: 20px;  
@@ -146,23 +146,26 @@ Types of CSS selectors:
       color: green;  
   }
   ```
-3. Class (.classname)
+3. **Class (.classname)**
+  
   ```html
   <div class='container'>  
       <h1> This is heading </h1>  
   </div>
   ```
+  
   ```css
   .container {  
         margin: 10px;  
   }
   ```
-4. ID (#idname) - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
+4. **ID (#idname)** - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
   ```html
   <div>  
       <p id='para1'> This is a paragraph </p>  
   </div>
   ```
+  
   ```css
   #para1 {  
         color: green;  
