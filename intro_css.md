@@ -153,6 +153,7 @@ Types of CSS selectors:
         margin: 10px;  
   }
   ```
+  
   ```html
   <div class='container'>  
       <h1> This is heading </h1>  
@@ -166,6 +167,7 @@ Types of CSS selectors:
         font-size: 16px;  
   }
   ```
+  
   ```html
   <div>  
       <p id='para1'> This is a paragraph </p>  
