@@ -22,7 +22,7 @@ First, and foremost, jQuery is just a **Javascript library**. So, in order to _u
 ## jQuery Intro
 ---
 
-We are going to start with a sample project within JS Fiddle that already loads jQuery for you with a page code as below:
+We are going to start with a sample project within [JS Fiddle](https://jsfiddle.net/boilerplate/jquery) that already loads jQuery for you with a page code as below:
 
 ```html
 <html>
@@ -30,6 +30,9 @@ We are going to start with a sample project within JS Fiddle that already loads 
     <title>jQuery addClass example</title>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    <style>
+      ...
+    </style>
     <script type="text/javascript">
       window.onload=function(){
         // find elements
