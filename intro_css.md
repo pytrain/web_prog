@@ -22,13 +22,13 @@
 
 ### CSS Code Location
 
-- Inline: We can add styles within a `style` attribute of HTML tags.
+- **Inline:** We can add styles within a `style` attribute of HTML tags.
 
   ```html
   <h1 style="color: red">Create My First Website</h1>
   ```
 
-- Internal/Header: We can add more general styles within a `style` tag in the HTML document header.
+- **Internal/Header:** We can add more general styles within a `style` tag in the HTML document header.
   ```html
   <head>
     <title>HTML Programming Example</title>
@@ -43,7 +43,7 @@
 
   **Note:** This applies to all tags unless specifying more detailed contexts (described later in the [selectors](#css-selectors) section).
 
-- External File: This is the preferred method for projects so that we can separate the CSS code from the HTML code.
+- **External File:** This is the preferred method for projects so that we can separate the CSS code from the HTML code.
   ```html
   <head>
     <title>HTML Programming Example</title>
@@ -130,50 +130,46 @@ p {
 Types of CSS selectors:
 
 1. Universal (*)
-
   ```css
   * {
-  padding: 5px;
-  border: 1px solid black;
-  background: rgba(255,0,0,0.25)
-}
+      padding: 5px;
+      border: 1px solid black;
+      background: rgba(255,0,0,0.25)
+  }
   ```
 2. Element (h1)
-
   ```css
   h1 {  
-    font-size: 20px;  
-}  
-p {  
-    color: green;  
-} 
+      font-size: 20px;  
+  }  
+  p {  
+      color: green;  
+  }
   ```
 3. Class (.classname)
   ```html
-<div class='container'>  
-    <h1> This is heading </h1>  
-</div>
+  <div class='container'>  
+      <h1> This is heading </h1>  
+  </div>
   ```
-  
   ```css
   .container {  
-    margin: 10px;  
-}
+        margin: 10px;  
+  }
   ```
 4. ID (#idname) - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
-
   ```html
-<div>  
-    <p id='para1'> This is a paragraph </p>  
-</div>
+  <div>  
+      <p id='para1'> This is a paragraph </p>  
+  </div>
   ```
-  
   ```css
   #para1 {  
-    color: green;  
-    font-size: 16px;  
-}
+        color: green;  
+        font-size: 16px;  
+  }
   ```
+
 CSS selectors can also be combined to add specificity to certain elements:
 
 ```css
