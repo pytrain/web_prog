@@ -11,8 +11,13 @@
 **We will cover the following:**
 - [What is PHP?](#what-is-php?)
 - [Advantages of PHP](#advantages-of-php)
+- [My First PHP Script](#my-first-php-script)
+- [Variables](#variables)
+- [Data Types](#data-types)
 
 ## What is PHP?
+---
+
 - The Hypertext Preprocessor (PHP) is a very popular and widely-used open source server-side scripting language to write dynamically generated web pages.
 - PHP scripts are executed on the server and the result is sent to the web browser as plain HTML.
 - PHP can be integrated with databases such as MySQL, PostgreSQL, Oracle, Microsoft SQL Server, Sybase, etc. 
@@ -27,6 +32,8 @@
   - Encrypt data for safe transmission over internet.
   
 ## Advantages of PHP
+---
+
 - **Easy to learn**
 - **Open source**
 - **Portability**: PHP runs on various platforms such as Microsoft Windows, Linux, Mac OS, etc. and it is compatible with almost all servers used today such Apache, IIS, etc.
@@ -34,6 +41,8 @@
 - **Vast Community**
 
 ## My First PHP Script
+---
+
 - A PHP script starts with the **`<?php`** and ends with the **`?>`** tag.
 - Every PHP statement end with a semicolon (**`;`**)
 
@@ -61,7 +70,7 @@ echo "Hello, world!";
 ```
 
 ### Comments
-- PHP support single-line as well as multi-line comments. 
+- PHP supports single-line as well as multi-line comments. 
 - To write a single-line comment either start the line with either two slashes (**`//`**) or a hash symbol (**`#`**).
 - To write multi-line comments, start the comment with a slash followed by an asterisk (**`/*`**) and end the comment with an asterisk followed by a slash (**`*/`**)
 
@@ -146,6 +155,8 @@ print $colors[0];
 ```
 
 ## Variables
+---
+
 - A variable does not need to be declared before adding a value to it.
 - All variables in PHP start with a **`$`** sign, followed by the name of the variable.
 A variable name must start with a letter or the underscore character **`_`**.
@@ -180,6 +191,8 @@ echo 'Thank you for visiting - ' . SITE_URL;
 ```
 
 ## Data Types
+---
+
 - PHP supports total eight primitive data types: 
   1. Integer
   2. Floating point number or Float
@@ -427,3 +440,576 @@ $colors[2] = "Blue";
 
 ### <>---<> Associative Arrays
 - In an associative array, the keys assigned to values can be arbitrary and user defined strings.
+
+```php
+<?php
+$color_codes = array(
+    "Red" => "#ff0000",
+    "Green" => "#00ff00",
+    "Blue" => "#0000ff"
+);
+var_dump($color_codes);
+?>
+```
+
+```php
+<?php
+$color_codes["Red"] = "#ff0000"; 
+$color_codes["Green"] = "#00ff00"; 
+$color_codes["Blue"] = "#0000ff"; 
+?>
+```
+
+### <>---<> Multidimensional Arrays
+- The multidimensional array is an array in which each element can also be an array and each element in the sub-array can be an array or further contain array within itself and so on
+
+```php
+<?php
+// Define a multidimensional array
+$contacts = array(
+    array(
+        "name" => "Peter Parker",
+        "email" => "peterparker@mail.com",
+    ),
+    array(
+        "name" => "Clark Kent",
+        "email" => "clarkkent@mail.com",
+    ),
+    array(
+        "name" => "Harry Potter",
+        "email" => "harrypotter@mail.com",
+    )
+);
+// Access nested value
+echo "Peter Parker's Email-id is: " . $contacts[0]["email"];
+?>
+```
+
+### <>---<> Viewing Array Structure and Values
+- **var_dump()** or **print_r()**
+
+```php
+<?php
+// Define array
+$cities = array("London", "Paris", "New York");
+ 
+// Display the cities array
+print_r($cities);
+
+var_dump($cities);
+?>
+```
+
+### <>---<> Sorting Arrays
+- **sort()** and **rsort()** — For sorting indexed arrays in ascending and descending orders respectively.
+- **asort()** and **arsort()** — For sorting associative arrays by value in ascending and descending orders respectively.
+- **ksort()** and **krsort()** — For sorting associative arrays by key in ascending and descending orders respectively.
+
+```php
+<?php
+// Define array
+$colors = array("Red", "Green", "Blue", "Yellow");
+ 
+// Sorting and printing array
+sort($colors);
+print_r($colors);
+
+rsort($colors);
+print_r($colors);
+?>
+```
+
+```php
+<?php
+// Define array
+$age = array("Peter"=>20, "Harry"=>14, "John"=>45, "Clark"=>35);
+ 
+// Sorting array by value and print
+asort($age);
+print_r($age);
+?>
+```
+
+```php
+<?php
+// Define array
+$age = array("Peter"=>20, "Harry"=>14, "John"=>45, "Clark"=>35);
+ 
+// Sorting array by key and print
+krsort($age);
+print_r($age);
+?>
+```
+
+### <>---<> Array Operators
+
+| Operator | Description | Example | Result |
+| --- | --- | --- | --- |
+| +	| Union	| $\$$x + $\$$y |	Union of $\$$x and $\$$y |
+| ==	| Equality |	$\$$x == $\$$y |	True if $\$$x and $\$$y have the same  key/value pairs |
+| ===	| Identity	| $\$$x === $\$$y	| True if $\$$x and $\$$y have the same  key/value pairs |
+| $ $| $ $ | $ $ | in the same order and of the same types |
+| !=	| Inequality |	$\$$x != $\$$y |	True if $\$$x is not equal to $\$$y |
+| <>	| Inequality |	$\$$x <> $\$$y |	True if $\$$x is not equal to $\$$y |
+| !==	| Non-identity |	$\$$x !== $\$$y |	True if $\$$x is not identical to $\$$y |
+
+```php
+<?php
+$x = array("a" => "Red", "b" => "Green", "c" => "Blue");
+$y = array("u" => "Yellow", "v" => "Orange", "w" => "Pink");
+$z = $x + $y; // Union of $x and $y
+var_dump($z);
+var_dump($x == $y);   // Outputs: boolean false
+var_dump($x === $y);  // Outputs: boolean false
+var_dump($x != $y);   // Outputs: boolean true
+var_dump($x <> $y);   // Outputs: boolean true
+var_dump($x !== $y);  // Outputs: boolean true
+?>
+```
+
+### Objects
+- An object is a data type that not only allows storing data but also information on, how to process that data. 
+- An object is a specific instance of a class which serve as templates for objects. 
+- Every object has properties and methods corresponding to those of its parent class. 
+- Every object instance is completely independent, with its own properties and methods, and can thus be manipulated independently of other objects of the same class.
+
+```php
+// Class definition
+class greeting{
+    // properties
+    public $str = "Hello World!";
+    
+    // methods
+    function show_greeting(){
+        return $this->str;
+    }
+}
+ 
+// Create object from class
+$message = new greeting;
+var_dump($message);
+?>
+```
+
+### Resources
+- A resource is a special variable, holding a reference to an external resource.
+- Resource variables typically hold special handlers to opened files and database connections.
+
+```php
+<?php
+// Open a file for reading
+$handle = fopen("note.txt", "r");
+var_dump($handle);
+echo "<br>";
+ 
+// Connect to MySQL database server with default setting
+$link = mysql_connect("localhost", "root", "");
+var_dump($link);
+?>
+```
+
+### NULL
+- The special NULL value is used to represent empty variables in PHP. 
+- A variable of type NULL is a variable without any data. 
+- NULL is the only possible value of type null.
+- When a variable is created without a value in PHP like **`$var;`**, it is automatically assigned a value of null.
+
+```php
+<?php
+$a = NULL;
+var_dump($a);
+echo "<br>";
+ 
+$b = "Hello World!";
+$b = NULL;
+var_dump($b);
+?>
+```
+
+```php
+$var1 = NULL;
+
+// is not the same as
+$var2 = ""
+
+// $var1 has null value while $var2 indicates no value assigned to it.
+```
+
+## Conditional Statements
+---
+
+### if Statements
+
+```php
+// Syntax
+
+if(condition){
+    // Code to be executed
+}
+
+if(condition){
+    // Code to be executed if condition is true
+} else{
+    // Code to be executed if condition is false
+}
+
+if(condition1){
+    // Code to be executed if condition1 is true
+} elseif(condition2){
+    // Code to be executed if the condition1 is false and condition2 is true
+} else{
+    // Code to be executed if both condition1 and condition2 are false
+}
+```
+
+```php
+<?php
+$d = date("D");
+if($d == "Fri"){
+    echo "Have a nice weekend!";
+} elseif($d == "Sun"){
+    echo "Have a nice Sunday!";
+} else{
+    echo "Have a nice day!";
+}
+?>
+```
+
+### The Ternary Operator
+- Provides a shorthand way of writing the **if...else** statements.
+- It is represented by the question mark (**?**) symbol and it takes three operands: a condition to check, a result for **true**, and a result for **false**.
+
+condition ? value1 : value2;
+
+```php
+<?php
+if($age < 18){
+    echo 'Child'; // Display Child if age is less than 18
+} else{
+    echo 'Adult'; // Display Adult if age is greater than or equal to 18
+}
+?>
+
+\\ Using the ternary operator
+<?php echo ($age < 18) ? 'Child' : 'Adult'; ?>
+```
+
+### Switch…Case Statements
+- The switch-case statement tests a variable against a series of values until it finds a match, and then executes the block of code corresponding to that match.
+- How it works:
+  - The **switch** statement executes line by line and once PHP finds a **case** statement that evaluates to true, it's not only executes the code corresponding to that case statement, but also executes all the subsequent **case** statements till the end of the **switch** block automatically.
+  - To prevent this add a **break** statement to the end of each case block. 
+  
+```php
+\\ Syntax
+switch(n){
+    case label1:
+        // Code to be executed if n=label1
+        break;
+    case label2:
+        // Code to be executed if n=label2
+        break;
+    ...
+    default:
+        // Code to be executed if n is different from all labels
+}
+```
+
+```php
+<?php
+$today = date("D");
+switch($today){
+    case "Mon":
+        echo "Today is Monday. Clean your house.";
+        break;
+    case "Tue":
+        echo "Today is Tuesday. Buy some food.";
+        break;
+    case "Wed":
+        echo "Today is Wednesday. Visit a doctor.";
+        break;
+    case "Thu":
+        echo "Today is Thursday. Repair your car.";
+        break;
+    case "Fri":
+        echo "Today is Friday. Party tonight.";
+        break;
+    case "Sat":
+        echo "Today is Saturday. Its movie time.";
+        break;
+    case "Sun":
+        echo "Today is Sunday. Do some rest.";
+        break;
+    default:
+        echo "No information available for that day.";
+        break;
+}
+?>
+```
+
+## Loops
+---
+
+PHP supports four different types of loops.
+
+- **while** — loops through a block of code until the condition is evaluate to true.
+- **do…while** — the block of code executed once and then condition is evaluated. If the condition is true the statement is repeated as long as the specified condition is true.
+- **for** — loops through a block of code until the counter reaches a specified number.
+- **foreach** — loops through a block of code for each element in an array.
+
+### The "while” Loop
+
+```php
+// Syntax
+while(condition){
+    // Code to be executed
+}
+```
+
+```php
+// An example
+<?php
+$i = 1;
+while($i <= 3){
+    $i++;
+    echo "The number is " . $i . "<br>";
+}
+?>
+```
+
+### The “do-while” Loop
+- With a **do-while** loop the block of code executed once, and then the condition is evaluated, if the condition is true, the statement is repeated as long as the specified condition evaluated to is true.
+
+```php
+// Syntax
+do{
+    // Code to be executed
+}
+while(condition);
+```
+
+```php
+<?php
+$i = 1;
+do{
+    $i++;
+    echo "The number is " . $i . "<br>";
+}
+while($i <= 3);
+?>
+```
+
+### The ""for" Loop
+
+```php
+// Syntax
+for(initialization; condition; increment){
+    // Code to be executed
+}
+```
+
+```php
+// An example
+<?php
+for($i=1; $i<=3; $i++){
+    echo "The number is " . $i . "<br>";
+}
+?>
+```
+
+### "foreach" Loop
+
+```php
+// Syntax
+foreach($array as $value){
+    // Code to be executed
+}
+
+foreach($array as $key => $value){
+    // Code to be executed
+}
+```
+
+```php
+// Example
+<?php
+$colors = array("Red", "Green", "Blue");
+ 
+// Loop through colors array
+foreach($colors as $value){
+    echo $value . "<br>";
+}
+?>
+```
+
+```php
+// Another example
+<?php
+$superhero = array(
+    "name" => "Peter Parker",
+    "email" => "peterparker@mail.com",
+    "age" => 18
+);
+ 
+// Loop through superhero array
+foreach($superhero as $key => $value){
+    echo $key . " : " . $value . "<br>";
+}
+?>
+```
+
+## Functions
+- By default, function arguments are passed by value.
+- Passing an argument by reference is done by prepending an ampersand (**&**) to the argument name in the function definition.
+- Variables declared within a function are local and they cannot be viewed or manipulated from outside of that function.
+
+```php
+// Basic syntax
+
+function functionName(){
+    // Code to be executed
+}
+
+function myFunc($oneParameter, $anotherParameter){
+    // Code to be executed
+}
+```
+
+```php
+// An example
+<?php
+// Defining function
+function whatIsToday(){
+    echo "Today is " . date('l', mktime());
+}
+// Calling function
+whatIsToday();
+?>
+```
+
+```php
+// Another example
+<?php
+// Defining function
+function getSum($num1, $num2){
+  $sum = $num1 + $num2;
+  echo "Sum of the two numbers $num1 and $num2 is : $sum";
+}
+ 
+// Calling function
+getSum(10, 20);
+?>
+```
+
+### Functions with Optional Parameters and Default Values
+- You can create functions with optional parameters by inserting the parameter name, followed by an equals (**=**) sign.
+
+```php
+<?php
+// Defining function
+function customFont($font, $size=1.5){
+    echo "<p style=\"font-family: $font; font-size: {$size}em;\">Hello, world!</p>";
+}
+ 
+// Calling function
+customFont("Arial", 2);
+customFont("Times", 3);
+customFont("Courier");
+?>
+```
+
+### Returning Values from a Function
+- A function can not return multiple values. 
+- You can obtain similar results by returning an array.
+
+```php
+<?php
+// Defining function
+function getSum($num1, $num2){
+    $total = $num1 + $num2;
+    return $total;
+}
+ 
+// Printing returned value
+echo getSum(5, 10); // Outputs: 15
+?>
+```
+
+```php
+<?php
+// Defining function
+function divideNumbers($dividend, $divisor){
+    $quotient = $dividend / $divisor;
+    $array = array($dividend, $divisor, $quotient);
+    return $array;
+}
+ 
+// Assign variables as if they were an array
+list($dividend, $divisor, $quotient) = divideNumbers(10, 2);
+echo $dividend;  // Outputs: 10
+echo $divisor;   // Outputs: 2
+echo $quotient;  // Outputs: 5
+?>
+```
+
+```php
+<?php
+/* Defining a function that multiply a number
+by itself and return the new value */
+function selfMultiply(&$number){
+    $number *= $number;
+    return $number;
+}
+ 
+$mynum = 5;
+echo $mynum; // Outputs: 5
+ 
+selfMultiply($mynum);
+echo $mynum; // Outputs: 25
+?>
+```
+
+### The global Keyword
+- You can use the **global** keyword before the variables inside a function. This keyword turns the variable into a global variable, making it visible or accessible both inside and outside the function.
+
+```php
+<?php
+$greet = "Hello World!";
+ 
+// Defining function
+function test(){
+    global $greet;
+    echo $greet;
+}
+ 
+test(); // Outpus: Hello World!
+echo $greet; // Outpus: Hello World!
+ 
+// Assign a new value to variable
+$greet = "Goodbye";
+ 
+test(); // Outputs: Goodbye
+echo $greet; // Outputs: Goodbye
+?>
+```
+
+## GET and POST
+---
+
+- A web browser communicates with the server typically using one of the two HTTP (Hypertext Transfer Protocol) methods — GET and POST. 
+- Both methods pass the information differently and have different advantages and disadvantages.
+
+### The GET Method
+- In GET method the data is sent as URL parameters that are usually strings of name and value pairs separated by ampersands (&).
+
+In general, a URL with GET data will look like this:
+
+http://www.example.com/action.php?**name**=*john*&**age**=24
+
+- The bold parts in the URL are the GET parameters and the italic parts are the value of those parameters. 
+- More than one **parameter=value** can be embedded in the URL by concatenating with ampersands (**&**).
+- You can only send simple text data via GET method.
+
+### The POST Method
+- In POST method the data is sent to the server as a package in a separate communication with the processing script. 
+- Data sent through POST method will not visible in the URL.
