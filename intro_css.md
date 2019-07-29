@@ -159,7 +159,7 @@ Types of CSS selectors:
   </div>
   ```
   
-4. **ID (#idname)** - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
+4. **ID (#idname)** - can only be assigned to one element ([link](https://css-tricks.com/the-difference-between-id-and-class/)) but are like class selectors
   ```css
   #para1 {  
         color: green;  
@@ -260,6 +260,9 @@ h2 {
 Every HTML element can be thought of as a box and can be modified as such with relevant properties shown below:
 
 ![box model](https://mdn.mozillademos.org/files/13647/box-model-standard-small.png)
+
+Let's see if we can find the total width and height of a sample element below (in pixels):
+![example box](https://learn.shayhowe.com/assets/images/courses/html-css/opening-the-box-model/box-model.png)
 
 This allows one to position and manipulate each of the elements. In addition to this model, there are properties of the "box" such as:
 
