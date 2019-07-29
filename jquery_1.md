@@ -22,6 +22,36 @@ First, and foremost, jQuery is just a **Javascript library**. So, in order to _u
 ## jQuery Intro
 ---
 
+We are going to start with a sample project within JS Fiddle that already loads jQuery for you with a page code as below:
+
+```html
+<html>
+  <head>
+    <title>jQuery addClass example</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+    <script type="text/javascript">
+      window.onload=function(){
+        // find elements
+        var banner = $("#banner-message")
+        var button = $("button")
+
+        // handle click and add class
+        button.on("click", function(){
+          banner.addClass("alt")
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div id="banner-message">
+      <p>Hello World</p>
+      <button>Change color</button>
+    </div>
+  </body>
+</html>
+```
+
 **Note:** There is also subject matter related to traversing elements and chaining together operations using the `(.)` notation. We will not be covering this.
 
 ## Selectors
