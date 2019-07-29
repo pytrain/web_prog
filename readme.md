@@ -21,13 +21,15 @@ Welcome to the 2-Day Introductory Web Programming course! We intend to teach you
 | 15:00 - 15:15 | Break | |
 | 15:15 - 16:30 | [jQuery II](jquery_2.md) | Brent |
 
+Brent's local files from Day 1's lecture. [link](https://github.com/pytrain/web_prog/tree/master/planets)
+
 ### Day 2: PHP
 
 | Time | Lecture Topic | Lecturer |
 |------|---------------|----------|
-| 08:45 - 09:45 | Introduction to PHP | Brent |
+| 08:45 - 09:45 | [PHP Setup](php_setup.md) | Brent |
 | 09:45 - 10:00 | Break | |
-| 10:00 - 12:00 | The PHP Scripting Language | Jules |
+| 10:00 - 12:00 | [The PHP Scripting Language](intro_php.md) | Jules |
 | 12:00 - 13:00 | Lunch Break | |
 | 13:00 - 14:30 | Sample PHP Project | Brent |
 | 14:30 - 15:30 | Introduction to PHP-Apache Interactions | Brent |
