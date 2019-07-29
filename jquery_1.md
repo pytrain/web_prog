@@ -38,3 +38,6 @@ First, and foremost, jQuery is just a **Javascript library**. So, in order to _u
 
 ## Resources
 ---
+
+- [jQuery Official Tutorial](https://learn.jquery.com/)
+- [jQuery Tutorial](https://learn.shayhowe.com/advanced-html-css/jquery/)
