@@ -19,7 +19,7 @@ Welcome to the 2-Day Introductory Web Programming course! We intend to teach you
 | 13:00 - 14:00 | [Javascript II](js_two.md) | Brent |
 | 14:00 - 15:00 | [jQuery I](jquery_1.md) | Brent |
 | 15:00 - 15:15 | Break | |
-| 15:15 - 16:30 | [jQeury II](jquery_2.md) | Brent |
+| 15:15 - 16:30 | [jQuery II](jquery_2.md) | Brent |
 
 ### Day 2: PHP
 
