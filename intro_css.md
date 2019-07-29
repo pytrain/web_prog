@@ -153,11 +153,12 @@ Types of CSS selectors:
         margin: 10px;  
   }
   ```  
-  ```html
-  <div class='container'>  
-      <h1> This is heading </h1>  
-  </div>
-  ```
+  
+    ```html
+    <div class='container'>  
+        <h1> This is heading </h1>  
+    </div>
+    ```
   
 4. **ID (#idname)** - can only be assigned to one element ([link](https://css-tricks.com/the-difference-between-id-and-class/)) but are like class selectors
   ```css
@@ -167,11 +168,11 @@ Types of CSS selectors:
   }
   ```
   
-  ```html
-  <div>  
-      <p id='para1'> This is a paragraph </p>  
-  </div>
-  ```
+    ```html
+    <div>  
+        <p id='para1'> This is a paragraph </p>  
+    </div>
+    ```
 
 CSS selectors can also be combined to add specificity to certain elements:
 
