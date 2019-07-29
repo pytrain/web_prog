@@ -11,3 +11,4 @@ Going back to our planetary website, we want to add a form at the bottom of the 
 3. When the user clicks the submit button, alert the user with a summary of their request.
 4. Let's rewrite the code for changing the background color on hover of the first planet. Do this though in jQuery instead of pure Javascript.
 5. Hide all planetary images until the section titles have been hovered over.
+6. Add one form element/widget/effect/interaction to your form from the [jQuery UI library](https://jqueryui.com/).
