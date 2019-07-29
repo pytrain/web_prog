@@ -4,7 +4,7 @@
 
 **We will cover the following:**
 - [CSS Frontmatter](#css-frontmatter)
-- [Selectors](#selectors)
+- [Selectors](#css-selectors)
 - [Typography](#typography)
 - [Box Model](#the-box-model)
 - [Resources](#resources)
@@ -22,13 +22,13 @@
 
 ### CSS Code Location
 
-Inline: We can add styles within a `style` attribute of HTML tags.
-```html
+- Inline: We can add styles within a `style` attribute of HTML tags.
+  ```html
 <h1 style="color: red">Create My First Website</h1>
 ```
 
-Internal/Header: We can add more general styles within a `style` tag in the HTML document header.
-```html
+- Internal/Header: We can add more general styles within a `style` tag in the HTML document header.
+  ```html
   <head>
     <title>HTML Programming Example</title>
     
@@ -40,10 +40,10 @@ Internal/Header: We can add more general styles within a `style` tag in the HTML
   </head>
 ```
 
-**Note:** This applies to all tags unless specifying more detailed contexts (described later in the [selectors](#selectors) section).
+  **Note:** This applies to all tags unless specifying more detailed contexts (described later in the [selectors](#css-selectors) section).
 
-External File: This is the preferred method for projects so that we can separate the CSS code from the HTML code.
-```html
+- External File: This is the preferred method for projects so that we can separate the CSS code from the HTML code.
+  ```html
   <head>
     <title>HTML Programming Example</title>
     
