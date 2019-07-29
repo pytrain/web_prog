@@ -146,31 +146,30 @@ Types of CSS selectors:
       color: green;  
   }
   ```
-3. **Class (.classname)**
-  
+
+3. **Class (.classname)**  
+  ```css
+  .container {  
+        margin: 10px;  
+  }
+  ```
   ```html
   <div class='container'>  
       <h1> This is heading </h1>  
   </div>
   ```
   
-  ```css
-  .container {  
-        margin: 10px;  
-  }
-  ```
 4. **ID (#idname)** - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
-  ```html
-  <div>  
-      <p id='para1'> This is a paragraph </p>  
-  </div>
-  ```
-  
   ```css
   #para1 {  
         color: green;  
         font-size: 16px;  
   }
+  ```
+  ```html
+  <div>  
+      <p id='para1'> This is a paragraph </p>  
+  </div>
   ```
 
 CSS selectors can also be combined to add specificity to certain elements:
@@ -257,6 +256,21 @@ h2 {
 
 ## The Box Model
 ---
+
+Every HTML element can be thought of as a box and can be modified as such with relevant properties shown below:
+
+![box model](https://mdn.mozillademos.org/files/13647/box-model-standard-small.png)
+
+This allows one to position and manipulate each of the elements. In addition to this model, there are properties of the "box" such as:
+
+* overflow (auto, hidden, visible)
+* clipping (to trim the box's overflow)
+* outline
+
+Types of boxes:
+* block (stacked upon other boxes)
+* inline (flows with document's text)
+* inline-block (combination of the prior two)
 
 ## Exercise
 ---
