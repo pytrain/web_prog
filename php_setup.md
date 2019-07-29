@@ -29,10 +29,10 @@ We want to manually install PHP so that we can have more control over it's confi
      6. Line 939: `xmlrpc`
   6. We could change the INI file to allow us to use the PHP `mail()` function so we can send mail, but at this time, we do not want to try finding our ISP information and such to put there.
   7. Adding PHP to your environment PATH:
-    1. System Properties > "Advanced" Tab > Environment Variables
-    2. Scroll to find "PATH" and then click on it and edit it.
-    3. Add the following exactly at the end of this variables value line: `;C:\php`
-    4. Accept the changes and you might have to restart in order for this change to take effect.
+     1. System Properties > "Advanced" Tab > Environment Variables
+     2. Scroll to find "PATH" and then click on it and edit it.
+     3. Add the following exactly at the end of this variables value line: `;C:\php`
+     4. Accept the changes and you might have to restart in order for this change to take effect.
 
 ## Test for PHP
 ---
@@ -46,9 +46,9 @@ Copyright (c) 1997-2018 The PHP Group
 Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
 ```
 2. Using a file:
-  1. Create a text/ASCII file named index.php
-  2. Put the following code in this file: `<?php phpinfo(); ?>`
-  3. `cd` in your temrinal/comand prompt to the file's directory location.
-  4. Run from the command line or terminal: `php -S localhost:8000` This starts a local PHP server on your local webpage.
-  5. Open a browser and navigate to: http://localhost:8000/ (note: you might need https)
-  6. You should be seeing a page that displays your PHP server information.
+   1. Create a text/ASCII file named index.php
+   2. Put the following code in this file: `<?php phpinfo(); ?>`
+   3. `cd` in your temrinal/comand prompt to the file's directory location.
+   4. Run from the command line or terminal: `php -S localhost:8000` This starts a local PHP server on your local webpage.
+   5. Open a browser and navigate to: http://localhost:8000/ (note: you might need https)
+   6. You should be seeing a page that displays your PHP server information.
