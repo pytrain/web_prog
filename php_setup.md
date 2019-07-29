@@ -21,12 +21,12 @@ We want to manually install PHP so that we can have more control over it's confi
   3. Copy or rename `C:\php\php.ini-development` to become `C:\php\php.ini`. This allows us to have a pre-made INI file (configuration file) for the PHP executable, but we still have more edits to it before we can use it.
   4. Approximately line 751: change `;extension_dir = "./"` to be `extension_dir = "C:\php\ext"`. Note that I removed the semicolon to uncomment this line in the INI file as well. [(More Information)](https://www.php.net/manual/en/ini.core.php#ini.extension-dir)
   5. Uncomment the following extensions:
-    1. Line 906: `curl`
-    2. Line 908: `gd2`
-    3. Line 915: `mbstring`
-    4. Line 917: `mysqli`
-    5. Line 922: `pdo_mysql`
-    6. Line 939: `xmlrpc`
+     1. Line 906: `curl`
+     2. Line 908: `gd2`
+     3. Line 915: `mbstring`
+     4. Line 917: `mysqli`
+     5. Line 922: `pdo_mysql`
+     6. Line 939: `xmlrpc`
   6. We could change the INI file to allow us to use the PHP `mail()` function so we can send mail, but at this time, we do not want to try finding our ISP information and such to put there.
   7. Adding PHP to your environment PATH:
     1. System Properties > "Advanced" Tab > Environment Variables
