@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <style>
+      .saved-item{
+        color: red;
+      }
+    </style>
+</head>
+<body>
+    <a href="https://jquery.com/">jQuery</a>
+
+    <ul>
+      <li>Red orange yellow</li>
+      <li>Green blue violet</li>
+      <li>black white brown</li>
+      <li>dog cat goldfish</li>
+    </ul>
+
+    <div class="notice-warning">
+      <div class="notice-close">&#215;</div>
+      <strong>Warning!</strong> I&#8217;m about to lose my cool.
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- <script src="jquery-3.4.1.min.js"></script> -->
+    <script>
+      $( document ).ready(function() {
+        $( 'a' ).click(function( event ) {
+          alert( "Thanks for visiting!" );
+          event.preventDefault();
+        });
+
+        $( 'a' ).css({ fontSize: '3em' });
+
+        $('li').click(function(event){
+  $(this).addClass('saved-item');
+});
+
+        $('.notice-close').on('click', function(event){
+          $('.notice-warning').fadeOut('slow', function(event){
+            $(this).remove();
+          });
+        });
+      });
+    </script>
+</body>
+</html>
