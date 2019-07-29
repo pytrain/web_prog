@@ -91,7 +91,6 @@ The cascade is as follows:
 - **D** is the last one.
 
 ### Comments
----
 Comments in CSS only have one style:
 ```css
 /* Handle basic element styling */
@@ -130,6 +129,7 @@ p {
 Types of CSS selectors:
 
 1. Universal (*)
+
   ```css
   * {
   padding: 5px;
@@ -138,6 +138,7 @@ Types of CSS selectors:
 }
   ```
 2. Element (h1)
+
   ```css
   h1 {  
     font-size: 20px;  
@@ -159,6 +160,7 @@ p {
 }
   ```
 4. ID (#idname) - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
+
   ```html
 <div>  
     <p id='para1'> This is a paragraph </p>  
