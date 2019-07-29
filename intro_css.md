@@ -23,9 +23,10 @@
 ### CSS Code Location
 
 - Inline: We can add styles within a `style` attribute of HTML tags.
+
   ```html
-<h1 style="color: red">Create My First Website</h1>
-```
+  <h1 style="color: red">Create My First Website</h1>
+  ```
 
 - Internal/Header: We can add more general styles within a `style` tag in the HTML document header.
   ```html
