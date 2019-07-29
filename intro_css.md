@@ -2,70 +2,265 @@
   <h1>Introduction to CSS (Cascading Style Sheets)</h1>
 </center>
 
-https://developer.mozilla.org/en-US/docs/Web
-https://learn.shayhowe.com/
-https://www.smashingmagazine.com/2019/01/how-to-learn-css/
-https://learnxinyminutes.com/docs/css/
-
 **We will cover the following:**
-- [Basics of CSS](#basics-of-css)
-- CSS Selectors
+- [CSS Frontmatter](#css-frontmatter)
+- [Selectors](#selectors)
+- [Typography](#typography)
+- [Box Model](#the-box-model)
 - [Resources](#resources)
+  - [Online Editors](#online-editors)
 
-CSS: animations, grids, backgrounds, box model, flexbox, transitions, positioning, typography
-
-## Basics of CSS
---
+## CSS Frontmatter
+---
 
 - The purpose of CSS is used to manipulate how your HTML webpage is visually presented or "styled".
 - The "Cascading" in CSS is that there is an inherent hierarchy of the styling rules upon an element. So, multiple style sources can apply to a single webpage (HTML) element.
-- CSS can be inline in an HTML document, in the header of a HTML document, or as an external file that is referenced/loaded into the header of a HTML document.
+- Validation of CSS: [css-validator](https://jigsaw.w3.org/css-validator/)
+- CSS is converted into the DOM (Document Object Model; representation of the computer's memory) to be combined with HTML content. The browser displays the contents of the DOM. (We do not cover this in this lecture, but you can read more about this [here](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works#How_does_CSS_actually_work), [here](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), [here](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html), and [here](https://www.w3.org/DOM/).)
+- As a general introduction as to the purpose of CSS, let's walk through a 4-minute guide on web design found [here](https://jgthms.com/web-design-in-4-minutes/).
+- CSS3 (latest version) has media queries which allow you to specify the context of the CSS style (print, screen with a certain width, etc.). We will not be covering these in this lecture.
 
+### CSS Code Location
+
+Inline: We can add styles within a `style` attribute of HTML tags.
 ```html
-<!DOCTYPE html>
-<html>
+<h1 style="color: red">Create My First Website</h1>
+```
 
+Internal/Header: We can add more general styles within a `style` tag in the HTML document header.
+```html
   <head>
     <title>HTML Programming Example</title>
     
     <style>
       h1 {
-          font-size: 20px;
+          color: red;
       }
     </style>
+  </head>
+```
+
+**Note:** This applies to all tags unless specifying more detailed contexts (described later in the [selectors](#selectors) section).
+
+External File: This is the preferred method for projects so that we can separate the CSS code from the HTML code.
+```html
+  <head>
+    <title>HTML Programming Example</title>
     
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
-  
-  <body>
-    <h1 style="color: red">Create My First Website</h1>
-    <p>Here are the basic components of an HTML document!</p>
-    
-    <h1 style="font-size: 30px">Another H1 Header</h1>
-  </body>
-  
-</html>
 ```
 
-Above, we can set the color of the first `h1` HTML tag contents to be colored red. If we wanted to do that for all of our h1 headings, we would include it in the header or in `style.css` as a reference to h1 as above where we have set all of the h1 font sizes to be 20px. Regarding hierarchy, the font-size style in the `<style>` tag changes all of the font-sizes of h1 texts to be 20px. Then, if there is a reference to h1 in the `style.css` file, that would override the prior application of the 20px font size. Next, if we look at the second h1 tag within the body of the HTML document, we see that for that particular text, we will have the font size as 30px instead of 20px. This last inline style overrides any styles on a more general scope.
+Whether using the external file or the header approach, CSS is meant to be readible and thus white space is ignored, semicolons are used to end property lines, and squiggly brackets are used to encapsulate each selector or rule.
 
-As a general introduction as to the purpose of CSS, let's walk through a 4-minute tutorial on web design found [here](https://jgthms.com/web-design-in-4-minutes/).
+There is a way to write shorthand to combine properties one a single line, but we will not cover this within this lecture.
 
-https://www.freecodecamp.org/news/get-started-with-css-in-5-minutes-e0804813fc3e/
+**Hierarchy:**
+
+There is an order to the cascade of styles when applied to a single HTML element: importance, specificity, and source order. [Here](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance) is a document that details this cascading effect in more detail.
+
+Given the following CSS:
+```css
+/* A */
+p.class1[attr='value']
+
+/* B */
+p.class1 { }
+
+/* C */
+p.class2 { }
+
+/* D */
+p { }
+
+/* E */
+p { property: value !important; }
+```
+
+and the following HTML:
+```html
+<p style='/*F*/ property:value;' class='class1 class2' attr='value'>
+```
+
+The cascade is as follows:
+- **E** has the highest precedence because of the keyword `!important`. It is recommended that you avoid its usage.
+- **F** is next, because it is an inline style.
+- **A** is next, because it is more “specific” than anything else. It has 3 specifiers: The name of the element `p`, its class `class1`, an attribute `attr='value'`.
+- **C** is next, even though it has the same specificity as **B**. This is because it appears after **B**.
+- **B** is next.
+- **D** is the last one.
+
+### Comments
+---
+Comments in CSS only have one style:
+```css
+/* Handle basic element styling */
+body {
+  font-size: 62.5%  /* 1em = 10px */
+}
+```
 
 ## CSS Selectors
 ---
 
-1. Global (*)
+CSS selectors act similar to HTML elements:
+```css
+div { ... }
+```
+
+```html
+<div>...</div>
+<div>...</div>
+```
+
+However, the use of CSS can allow us to reduce the amount of HTML code we need:
+
+```css
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+```
+
+```html
+<p><strong><i>Some text.</i></strong></p>
+<p><strong><i>Some more text.</i></strong></p>
+```
+
+Types of CSS selectors:
+
+1. Universal (*)
+  ```css
+  * {
+  padding: 5px;
+  border: 1px solid black;
+  background: rgba(255,0,0,0.25)
+}
+  ```
 2. Element (h1)
+  ```css
+  h1 {  
+    font-size: 20px;  
+}  
+p {  
+    color: green;  
+} 
+  ```
 3. Class (.classname)
-3. ID (#idname) - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/)
+  ```html
+<div class='container'>  
+    <h1> This is heading </h1>  
+</div>
+  ```
+  
+  ```css
+  .container {  
+    margin: 10px;  
+}
+  ```
+4. ID (#idname) - can only be assigned to one element (https://css-tricks.com/the-difference-between-id-and-class/) but are like class selectors
+  ```html
+<div>  
+    <p id='para1'> This is a paragraph </p>  
+</div>
+  ```
+  
+  ```css
+  #para1 {  
+    color: green;  
+    font-size: 16px;  
+}
+  ```
+CSS selectors can also be combined to add specificity to certain elements:
 
-## Fonts and Colors
+```css
+.hotdog p {
+  background: brown;
+}
+.hotdog p.mustard {
+  background: yellow;
+}
+```
 
-## CSS Layouts
+```html
+<div class="hotdog">
+  <p>...</p>
+  <p>...</p>
+  <p class="mustard">...</p>
+</div>
+```
+
+**Note:** there are further selectors such as pseudo-classes, but that is more specific to context or the state of a HTML element such as `:hover` when a user hovers over that element.
+
+## Typography
+
+### Fonts
+---
+
+The main properties to style text on a web page are as follows:
+
+* color (see below)
+* font-family
+* font-size
+* font-weight
+* line-height
+
+There is also text decoration, alignment, indentation, shadows, transformations, spacing, and so much more.
+
+### Colors
+---
+
+Colors can be specified using keywords, hexadecimal values, RGB, RGBa, HSL, and HSLa values. Hexadecimal values are the most popular method.
+
+```css
+html {
+  color: #555;
+}
+```
+
+To see all of this typography at one glance:
+
+```html
+<h2><a href="#">I Am a Builder</a></h2>
+
+<p class="byline">Posted by Shay Howe</p>
+
+<p>Every day I see designers and developers working alongside one another. They work intelligently in pursuit of business objectives. They work diligently making exceptional products. They solve real problems and take pride in their work. They are builders. <a href="#">Continue&#8230;</a></p>
+```
+
+```css
+h2,
+p {
+  color: #555;
+  font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #0087cc;
+}
+a:hover {
+  color: #ff7b29;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+.byline {
+  color: #9799a7;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  margin-bottom: 18px;
+}
+```
+
+## The Box Model
+---
+
+## Exercise
+---
 
 Exercises:
+- Project: form?
 - Their own personal website or blog (sketch a draft, then create it)
 - CSS Zen Garden
 - Position planet - https://www.khanacademy.org/computing/computer-programming/html-css/css-layout-properties/pc/challenge-position-planet
@@ -91,3 +286,19 @@ Exercises:
 - [CSS Documentation Reference](https://devdocs.io/css/)
 - [Bootstrap CSS](https://getbootstrap.com/docs/3.3/css/): A good packaged CSS style made for you to use.
 - [CSS Zen Garden](http://www.csszengarden.com/): A website that is fun to manipulate with very many examples from others.
+- [Learn to Code HTML & CSS](https://learn.shayhowe.com/): A great resource for both HTML and CSS
+- [Smashing Magazine Article](https://www.smashingmagazine.com/2019/01/how-to-learn-css/)
+- [Learn X in Y Minutes: CSS](https://learnxinyminutes.com/docs/css/): A one-page document reference.
+- [My Device](https://www.mydevice.io/): Let's you see the properties of your current browser window.
+
+### Online Editors
+
+Below are online, interactive playgrounds that allow you to use HTML, CSS, and Javascript for coding and testing:
+
+- My Recommendations:
+  - [CodePen](https://codepen.io/)
+  - [JSFiddle](https://jsfiddle.net/)
+- Others:
+  - [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools): In-browser tools that Mozilla has developed.
+  - [Dabblet](http://dabblet.com/): Only HTML and CSS
+  - [JSBin](http://jsbin.com/)
