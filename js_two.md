@@ -52,6 +52,7 @@ In this portion of the exercise, we will now modify the CSS style to add some fl
   2. Change the font size to be 30px.
   3. Align this text to be on the same line next to each other.
   4. Change the color of these to be some type of green.
+6. Download and use a local copy of [Bootstrap CSS](https://getbootstrap.com/). Name this local CSS file as bootstrap.css.
 6. Lastly, let's put back the logo of the page and modify it to be the NASA logo.
 
 ## Javascript
