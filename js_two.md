@@ -6,6 +6,9 @@ This lecture period will be used to apply our new knowledge of combining HTML, C
 
 **We will cover the following:**
 - [A Planetary Website](#a-planetary-website)
+- [HTML](#html)
+- [CSS](#css)
+- [Javascript](#javascript)
 
 ## A Planetary Website
 ---
