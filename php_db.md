@@ -63,21 +63,26 @@ Since we did not install phpMyAdmin or MySQL itself, we need to work online to p
    if ($result->num_rows > 0) {
        // output data of each row
        while($row = $result->fetch_assoc()) {
-           echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+           print_r($row + "<br>");
        }
    } else {
        echo "0 results";
    }
    ```
 2. Notice the output array. We have the following entry in the database table:
-   | id | firstname | lastname | email | reg_date |
-   |----|-----------|----------|-------|----------|
-   |  1 | OpenIDM   | Platform for building enterpri | | 2016-09-30 11:21:15 |
-3. Modify the SQL statement to obtain all the IDs in the table.
+
+    | id | firstname | lastname | email | reg_date |
+    |----|-----------|----------|-------|----------|
+    |  1 | OpenIDM   | Platform for building enterpri | | 2016-09-30 11:21:15 |
+3. Let's modify that `print_r` to be an echo instead with a formatted output:
+   ```php
+   echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+   ```
+4. Modify the SQL statement to obtain all the IDs in the table.
    ```sql
    SELECT id FROM xfiddlec_max
    ```
-4. Notice there is only one ID. Let's insert one.
+5. Notice there is only one ID. Let's insert one.
    ```php
    $sql = "INSERT INTO xfiddlec_max (firstname, lastname, email) VALUES ('John', 'Doe', 'john@example.com');";
    $result = mysqli_query($conn, $sql);
@@ -88,7 +93,7 @@ Since we did not install phpMyAdmin or MySQL itself, we need to work online to p
        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
    }
    ```
-4. Modify the SQL statement to obtain only unique IDs in the table.
+6. Modify the SQL statement to obtain only unique IDs in the table.
    ```sql
    SELECT distinct id FROM xfiddlec_max
    ```
