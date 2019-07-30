@@ -52,3 +52,14 @@ We will start by building a sample website and guide you through step-by-step to
            text-align: center;
        }
        ```
+
+At this point in the project, you should be able to pause and look at the source code of the HTML and CSS that is being used. Notice the classes being used are Bootstrap-defined classes and that they are descriptive names. Notice how the CSS only aligns text and adds space. This should be a good start for our PHP project now.
+
+Let's create a simple login form (username only for now) on this single page.
+
+1. Remove the paragraph text in the middle of the page and let's add a simple input form and button.
+   1. Let's use the code for the sample email form here: https://getbootstrap.com/docs/4.3/components/forms/#overview
+   2. Copy this code into your `index.php` page where the paragraph text was.
+   3. Verify by reloading your page in the browser to see the changes.
+   4. Let's change this form to be only a username (not email) and just a button.  
+      ![now](https://raw.githubusercontent.com/pytrain/web_prog/master/images/one.png)
