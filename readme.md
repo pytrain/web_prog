@@ -31,7 +31,7 @@ Brent's local files from Day 1's lecture. [link](https://github.com/pytrain/web_
 | 09:45 - 10:00 | Break | |
 | 10:00 - 12:00 | [The PHP Scripting Language](intro_php.md) | Jules |
 | 12:00 - 13:00 | Lunch Break | |
-| 13:00 - 14:30 | Sample PHP Project | Brent |
+| 13:00 - 14:30 | [Sample PHP Project](php_proj.md) | Brent |
 | 14:30 - 15:30 | Introduction to PHP-Apache Interactions | Brent |
 | 15:30 - 15:55 | Break | |
 | 15:45 - 16:30 | Introduction to PHP-MySQL Interactions | Brent |
