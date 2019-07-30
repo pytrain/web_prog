@@ -63,3 +63,71 @@ Let's create a simple login form (username only for now) on this single page.
    3. Verify by reloading your page in the browser to see the changes.
    4. Let's change this form to be only a username (not email) and just a button.  
       ![now](https://raw.githubusercontent.com/pytrain/web_prog/master/images/one.png)
+2. Let's add a little PHP functionality.
+   1. Replace the form with the following code:
+       ```php
+       <?php
+         if ($_SERVER['REQUEST_METHOD'] != 'POST'){
+             echo '<h1>Bootstrap starter template</h1>
+                   <form action="index.php" method="post">
+                     <div class="form-group">
+                       <input type="text" class="form-control" name="userName" placeholder="Enter username">
+                     </div>
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                   </form>';
+         }
+         else {
+             echo "<h1>Welcome " . $_POST['userName'] . "</h1>";
+             echo "<p>Your username is: " . $_POST['userName'] . "</p>";
+         }
+       ?>
+       ```
+    2. Test out the functionality and see that your username is returned when the form is submitted.
+    
+At this point, we have a basic PHP application that only returns values submitted by users. What other functionality would you want to add to this form? Perhaps instead of a welcome message, we want to change the navigation to show the username and have a settings panel for customization? Or, perhaps we want to have when the user submits the form to be rejected depending upon the username?
+
+Ultimately, there are many options here, but we are going to do something different. We're going to log the username in a file and then return a chart with the user logins as a timeseries.
+
+Adding usernames to a file:
+1. The only modification we need is that when the user sees the welcome message, we need to add the username to a file as well.
+   1. Add the following code within the `else` portion of the conditional:
+      ```php
+      $file = 'people.txt';
+      $now = date("Y-m-d H:i:s");
+      // Open the file to get existing content
+      if file_exists($file){
+          $current = file_get_contents($file);
+          // Append a new person to the file
+          $current .= "\n" . $_POST['userName'] . ", " . $now;
+          // Write the contents back to the file
+          file_put_contents($file, $current);
+      }
+      else{
+          // Start a new person entry
+          $current = $_POST['userName'] . ", " . $now;
+          // Write the contents back to the file
+          file_put_contents($file, $current);
+      }
+      ```
+   2. Verify that this file is written to by using the form.
+   3. We have now a file-based database of users and entry times.
+2. Now, we need to visualize this data either when the user enters or as a continuous plot that updates as the file changes. There are many, many ways to solve this and I will leave this as an exercise for you to complete. For the time being, we can instead take and list continually the last 10 visitors and times to our website.
+   1. We need a separate portion of code in our page that tests to see if the file exists, open and read it contents, and then display the last 10 entries.
+   2. Add the following code to your page below the login stuff:
+       ```php
+       <?php
+           $file = 'people.txt';
+           if (file_exists($file)){
+               echo "<br><br>";
+               echo '<div class="alert alert-secondary">
+                       <h3 class="alert-heading">Latest 10 Vists</h3>
+                       <hr>';
+               $current = file($file);
+               for ($i = max(0, count($current)-10); $i < count($current); $i++){
+                   echo "<p>" . $current[$i] . "</p>";
+               }
+               echo "</div>";
+           }
+       ?>
+       ```
+    3. Verify that this now works and updates as you enter users.
