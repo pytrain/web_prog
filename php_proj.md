@@ -95,7 +95,7 @@ Adding usernames to a file:
       $file = 'people.txt';
       $now = date("Y-m-d H:i:s");
       // Open the file to get existing content
-      if file_exists($file){
+      if (file_exists($file)){
           $current = file_get_contents($file);
           // Append a new person to the file
           $current .= "\n" . $_POST['userName'] . ", " . $now;
