@@ -15,3 +15,26 @@ http://programanddesign.com/php/create-a-blog-in-30-minutes-without-a-framework/
   - https://stackoverflow.com/questions/21495733/is-there-any-way-to-test-php-locally-without-installing-a-server
 https://www.phpmyadmin.net/try/
 https://docs.phpmyadmin.net/en/latest/intro.html
+
+Project: 
+
+1. Start with css bootstrap?
+2. Sample and simple html5 page?
+3. Javascript or jquery?
+4. A form?
+5. [https://www.sitepoint.com/a-basic-html5-template/](https://www.sitepoint.com/a-basic-html5-template/)
+6. [https://html5boilerplate.com](https://html5boilerplate.com/)
+7. [https://getbootstrap.com/docs/4.3/examples/](https://getbootstrap.com/docs/4.3/examples/)
+
+1. Download bootstrap projects and get only the starter template (includes css and Javascript). Can I build this iteratively?
+2. What to change? Add drop down lists that represent certain choices. Form actions from php
+3. What php functions do I want to see?
+4. How do I teach html, css, and js as well?
+
+upload instructions for a bootstrap dropdown menu
+
+then upload instructions for multiple dropdown menus that are linked together (choose one → choices change for second one)
+
+Not viable, but cool:
+
+- [https://html5bones.com](https://html5bones.com/)
