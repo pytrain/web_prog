@@ -38,3 +38,11 @@ then upload instructions for multiple dropdown menus that are linked together (c
 Not viable, but cool:
 
 - [https://html5bones.com](https://html5bones.com/)
+
+- [https://javascript.info/](https://javascript.info/)
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [https://learn.jquery.com/](https://learn.jquery.com/)
+- [https://www.pluralsight.com/product/paths](https://www.pluralsight.com/product/paths)
+- [https://stackoverflow.com/questions/11437574/does-apache-have-to-be-installed-before-php-or-mysql](https://stackoverflow.com/questions/11437574/does-apache-have-to-be-installed-before-php-or-mysql)
+- [https://www.php.net/manual/en/tutorial.requirements.php](https://www.php.net/manual/en/tutorial.requirements.php)
+- [https://stackoverflow.com/questions/4301975/how-can-i-run-a-php-without-a-web-server](https://stackoverflow.com/questions/4301975/how-can-i-run-a-php-without-a-web-server)
